@@ -1,0 +1,9 @@
+prefix=/usr
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: vulkan
+Description: Imagination PowerVR Vulkan library
+Version: 1.0.1
+Libs: -L${libdir} -lvulkan
+Cflags: -I${includedir}
