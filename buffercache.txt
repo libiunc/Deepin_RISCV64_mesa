@@ -1,0 +1,40 @@
+
+-rw-r--r-- root/root    272264 2024-05-23 11:12 ./usr/lib/riscv64-linux-gnu/libEGL_pvr.so.0.0.0
+-rw-r--r-- root/root       104 2024-05-23 11:12 ./usr/share/glvnd/egl_vendor.d/40_pvr.json
+lrwxrwxrwx root/root         0 2024-05-23 11:12 ./usr/lib/riscv64-linux-gnu/libEGL_pvr.so -> libEGL_pvr.so.0
+lrwxrwxrwx root/root         0 2024-05-23 11:12 ./usr/lib/riscv64-linux-gnu/libEGL_pvr.so.0 -> libEGL_pvr.so.0.0.0
+-rw-r--r-- root/root     52056 2024-05-23 11:12 ./usr/lib/riscv64-linux-gnu/gbm/pvr_gbm.so
+lrwxrwxrwx root/root         0 2024-05-23 11:12 ./usr/lib/riscv64-linux-gnu/gbm/starfive_gbm.so -> pvr_gbm.so
+-rw-r--r-- root/root    264680 2024-05-23 11:12 ./usr/lib/riscv64-linux-gnu/pvr-dri/pvr_dri.so
+-rw-r--r-- root/root    395472 2024-05-23 11:12 ./usr/lib/riscv64-linux-gnu/libpvrglapi.so.0.0.0
+lrwxrwxrwx root/root         0 2024-05-23 11:12 ./usr/lib/riscv64-linux-gnu/libpvrglapi.so -> libpvrglapi.so.0
+lrwxrwxrwx root/root         0 2024-05-23 11:12 ./usr/lib/riscv64-linux-gnu/libpvrglapi.so.0 -> libpvrglapi.so.0.0.0
+-rw-r--r-- root/root   2255040 2024-05-23 11:12 ./usr/lib/riscv64-linux-gnu/libpvr_mesa_wsi.so
+
+
+/usr/lib/riscv64-linux-gnu/libGLESv1_CM_PVR_MESA.so.1.19.6345021
+/usr/lib/riscv64-linux-gnu/libGLESv2_PVR_MESA.so.1.19.6345021
+/usr/lib/riscv64-linux-gnu/libPVROCL.so.1.19.6345021
+/usr/lib/riscv64-linux-gnu/libPVRScopeServices.so.1.19.6345021
+/usr/lib/riscv64-linux-gnu/libVK_IMG.so.1.19.6345021
+/usr/lib/riscv64-linux-gnu/libglslcompiler.so.1.19.6345021
+/usr/lib/riscv64-linux-gnu/libpvr_dri_support.so.1.19.6345021
+/usr/lib/riscv64-linux-gnu/libsrv_um.so.1.19.6345021
+/usr/lib/riscv64-linux-gnu/libsutu_display.so.1.19.6345021
+/usr/lib/riscv64-linux-gnu/libufwriter.so.1.19.6345021
+/usr/lib/riscv64-linux-gnu/libusc.so.1.19.6345021
+/usr/share/OpenCL/vendors/IMG.icd
+/usr/share/vulkan/icd.d/pvr.json/icdconf.json
+/usr/lib/riscv64-linux-gnu/libGLESv1_CM_PVR_MESA.so
+/usr/lib/riscv64-linux-gnu/libGLESv2_PVR_MESA.so
+/usr/lib/riscv64-linux-gnu/libPVROCL.so
+/usr/lib/riscv64-linux-gnu/libPVROCL.so.1
+/usr/lib/riscv64-linux-gnu/libPVRScopeServices.so
+/usr/lib/riscv64-linux-gnu/libVK_IMG.so
+/usr/lib/riscv64-linux-gnu/libVK_IMG.so.1
+/usr/lib/riscv64-linux-gnu/libglslcompiler.so
+/usr/lib/riscv64-linux-gnu/libpvr_dri_support.so
+/usr/lib/riscv64-linux-gnu/libsrv_um.so
+/usr/lib/riscv64-linux-gnu/libsutu_display.so
+/usr/lib/riscv64-linux-gnu/libufwriter.so
+/usr/lib/riscv64-linux-gnu/libusc.so
