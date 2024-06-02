@@ -57,3 +57,6 @@ documentation (`docs/submittingpatches.rst
 <https://mesa3d.org/submittingpatches.html>`_).
 
 Note that Mesa uses gitlab for patches submission, review and discussions.
+
+
+使用扭曲的闭源驱动(blobs,etc..)绑定pvr 
