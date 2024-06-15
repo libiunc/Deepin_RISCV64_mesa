@@ -20,6 +20,7 @@
 
 主要的操作:在mesa的22.1.3版本上[加上](https://github.com/Icenowy/aosc-os-pvr/tree/master/ddk119/mesa-ddk119/autobuild/patches) 所有 patch，[参考](https://github.com/Icenowy/aosc-os-pvr/blob/master/ddk119/mesa-ddk119/autobuild/build) 进行打包安装
 
+[镜像下载](https://ci.deepin.com/repo/deepin/deepin-ports/cdimage/20240530/riscv64/deepin-23-beige-preview-riscv64-milkv-mars-20240530-103247.tar.xz)
 
       1 编译xorg 完成对dde-qt5的gles实现,并且修复xorg的pvrdri相关问题
    
