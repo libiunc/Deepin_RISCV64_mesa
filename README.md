@@ -7,6 +7,9 @@
 用什么能简单且直接的看到效果呢?
 
 当然是**glmark2-es2-drm --visual-config s=1**啦😋, [可以看此视频](https://www.bilibili.com/video/BV1eD421g7pX/)
+      注意,使用tty(Ctrl+Alt+F2)进行操作如果镜像内没有,请安装     
+            " apt-get update && apt-get install glmark2-es2-drm "
+            #包如其名 用来测试OpenGL ES的
 
 根据[https://github.com/deepin-community/qtbase-opensource-src/pull/28](url)以得到能用GPU的qt5杂交产物
 
@@ -14,9 +17,10 @@
 
 ~~为了不丢人,这里就不细说图形库相关内容了~~
 
-根据与dalao交流所获得的消息得知,jh7110的soc-GPU闭源驱动只能跑OpenGL ES 
+根据与~~dalao~~(chiba羊瞄)导师交流所获得的消息得知,jh7110的soc-GPU闭源驱动只能跑OpenGL ES ~~十分缺德~~
 
 [使用的img闭源驱动:](https://github.com/starfive-tech/soft_3rdpart/blob/c43d4fab94b0ef3b492a6382e2282fa7a2695b9b/IMG_GPU/out/img-gpu-powervr-bin-1.19.6345021.tar.gz)
+      喜闻乐见的是 指定提交平台只能上传不能大于50mb的单个文件,~~ 所以必定编译翻车~~
 
 主要的操作:在mesa的22.1.3版本上[加上](https://github.com/Icenowy/aosc-os-pvr/tree/master/ddk119/mesa-ddk119/autobuild/patches) 所有 patch，[参考](https://github.com/Icenowy/aosc-os-pvr/blob/master/ddk119/mesa-ddk119/autobuild/build) 进行打包安装
 
