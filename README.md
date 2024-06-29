@@ -1,15 +1,49 @@
 [题目是](https://github.com/oscomp/proj348-riscv-gpu-on-deepin)
 
+0630update:本项目最终没有入围,所以,寄拉😋~
+==
+
+最终进度止步于:能跑glmark2-es2-drm
+
+入围后继续的可能进度是:
+
+      DDE软件基本调用
+
+      打包成deb,dpkg即装即用
+      
+      合并进入Deepin源
+
+如果您想在240625之后获取(相对的)实时进度,[请关注](https://github.com/deepin-community/qtbase-opensource-src)
+==
+~~或者pm羊瞄dalao~~
+
+
+
+对于这块开发板我对其可能的操作有:
+
+      提供PWM风扇控制(好像有人做了)
+
+      nvme启动镜像(改一下spi内的ubbot就行)
+
+      引入手摇加解密库(RISC-V软路由,启动!)
+
+      ~~出售~~
+
+不可能的操作有:
+
+      使用rust重写显示驱动以支持OpenGL&ES Vulkan 等
+
+      修改视频编解码器
+
 原地址:**https://github.com/libiunc/Deepin_RISCV64_mesa**
+
+请**务必**使用[这个](https://github.com/libiunc/Deepin_RISCV64_mesa)github仓库进行评测,
 ==
 使用扭曲的img闭源驱动(blobs,etc..)屏蔽调度,绑定pvr,做到最基本的调用
 
 用什么能简单且直接的看到效果呢?
 
 当然是**glmark2-es2-drm --visual-config s=1**啦😋, [可以看此视频](https://www.bilibili.com/video/BV1eD421g7pX/)
-      注意,使用tty(Ctrl+Alt+F2)进行操作如果镜像内没有,请安装     
-            " apt-get update && apt-get install glmark2-es2-drm "
-            #包如其名 用来测试OpenGL ES的
 
 根据[https://github.com/deepin-community/qtbase-opensource-src/pull/28](url)以得到能用GPU的qt5杂交产物
 
@@ -17,14 +51,15 @@
 
 ~~为了不丢人,这里就不细说图形库相关内容了~~
 
-根据与~~dalao~~(chiba羊瞄)导师交流所获得的消息得知,jh7110的soc-GPU闭源驱动只能跑OpenGL ES ~~十分缺德~~
+根据与dalao交流所获得的消息得知,jh7110的soc-GPU闭源驱动只能跑OpenGL ES 
+=
+是的,它不能跑GL只能ES,在这之前Deepin的DDE(个人定义为KDE的特色版本)由llvmpipe渲染,简称cpu渲染
+=
 
 [使用的img闭源驱动:](https://github.com/starfive-tech/soft_3rdpart/blob/c43d4fab94b0ef3b492a6382e2282fa7a2695b9b/IMG_GPU/out/img-gpu-powervr-bin-1.19.6345021.tar.gz)
-      喜闻乐见的是 指定提交平台只能上传不能大于50mb的单个文件,~~ 所以必定编译翻车~~
 
 主要的操作:在mesa的22.1.3版本上[加上](https://github.com/Icenowy/aosc-os-pvr/tree/master/ddk119/mesa-ddk119/autobuild/patches) 所有 patch，[参考](https://github.com/Icenowy/aosc-os-pvr/blob/master/ddk119/mesa-ddk119/autobuild/build) 进行打包安装
 
-[镜像下载](https://ci.deepin.com/repo/deepin/deepin-ports/cdimage/20240530/riscv64/deepin-23-beige-preview-riscv64-milkv-mars-20240530-103247.tar.xz)
 
       1 编译xorg 完成对dde-qt5的gles实现,并且修复xorg的pvrdri相关问题
    
@@ -33,6 +68,7 @@
       3 完善debian的构建依赖
    
       4 进行deb分发,进入软件源中 
+
 
 
 
@@ -52,75 +88,4 @@
 
 板子很好玩期待后续发展
 ==
-~~**以下是mesa 220103版本的readme**~~
-===================================
 
-
-
-
-
-
-
-
-`Mesa <https://mesa3d.org>`_ - The 3D Graphics Library
-======================================================
-
-
-Source
-------
-
-This repository lives at https://gitlab.freedesktop.org/mesa/mesa.
-Other repositories are likely forks, and code found there is not supported.
-
-
-Build & install
----------------
-
-You can find more information in our documentation (`docs/install.rst
-<https://mesa3d.org/install.html>`_), but the recommended way is to use
-Meson (`docs/meson.rst <https://mesa3d.org/meson.html>`_):
-
-.. code-block:: sh
-
-  $ mkdir build
-  $ cd build
-  $ meson ..
-  $ sudo ninja install
-
-
-Support
--------
-
-Many Mesa devs hang on IRC; if you're not sure which channel is
-appropriate, you should ask your question on `OFTC's #dri-devel
-<irc://irc.oftc.net/dri-devel>`_, someone will redirect you if
-necessary.
-Remember that not everyone is in the same timezone as you, so it might
-take a while before someone qualified sees your question.
-To figure out who you're talking to, or which nick to ping for your
-question, check out `Who's Who on IRC
-<https://dri.freedesktop.org/wiki/WhosWho/>`_.
-
-The next best option is to ask your question in an email to the
-mailing lists: `mesa-dev\@lists.freedesktop.org
-<https://lists.freedesktop.org/mailman/listinfo/mesa-dev>`_
-
-
-Bug reports
------------
-
-If you think something isn't working properly, please file a bug report
-(`docs/bugs.rst <https://mesa3d.org/bugs.html>`_).
-
-
-Contributing
-------------
-
-Contributions are welcome, and step-by-step instructions can be found in our
-documentation (`docs/submittingpatches.rst
-<https://mesa3d.org/submittingpatches.html>`_).
-
-Note that Mesa uses gitlab for patches submission, review and discussions.
-
-
-使用扭曲的闭源驱动(blobs,etc..)绑定pvr 
